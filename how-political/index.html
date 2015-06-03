@@ -24,16 +24,6 @@
 		
 		<div class="form-group">
 			<input class="form-control" type="text" placeholder="attorney, lawyer" id="filter" />
-			<p class="help-block examples">
-				Examples: 
-					<a href="#">:all</a> (<em>all combined</em>), 
-					<a href="#">top:5</a> (<em>top 5 givers</em>), 
-					<a href="#">bottom:5</a> (<em>bottom 5 givers</em>),
-					<a href="#">admin</a>, 
-					<a href="#">computer, software, web</a>, 
-					<a href="#">^Software</a> (<em>^ indicates start of title</em>), 
-					<a href="#">^Agent$</a> (<em>$ indicates end of title</em>)
-			</p>
 		</div>
 
 		<div class="col-md-9 col-md-push-3">
@@ -53,6 +43,18 @@
 		</div>
 
 		<div class="col-md-3 col-md-pull-9">
+
+			Examples: 
+			<ul class="help-block list-unstyled examples">
+				<li><a href="#">:all</a> (<em>all combined</em>)</li> 
+				<li><a href="#">top:5</a> (<em>top 5 givers</em>)</li> 
+				<li><a href="#">bottom:5</a> (<em>bottom 5 givers</em>)</li>
+				<li><a href="#">admin</a> (<em>partial title match</em>)</li> 
+				<li><a href="#">computer, software, web</a></li> 
+				<li><a href="#">^Software</a> (<em>^ start of title</em>)</li> 
+				<li><a href="#">^Agent$</a> (<em>$ end of title</em>)</li>
+			</ul>
+
 			<p id="output"></p>			
 			<ul id="labels" class="list-unstyled"></ul>
 		</div>
