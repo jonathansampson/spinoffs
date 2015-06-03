@@ -14,8 +14,13 @@ $( function () {
 			matches = $.grep( donors, function ( donor ) {
 				return pattern.test( donor.label );
 			});
+			
+		if ( filter[0].value == ":all" ) matches = donors;
+		if ( filter[0].value == ":top" ) matches = donors.sort( function ( a, b ) {
+			return ( b.r + b.d + b.o ) - ( a.r + a.d + a.o );
+		}).slice(0,5);
 		
-		output.text( matches.length + " found:" );
+		output.text( matches.length + " titles matched:" );
 		
 		var i, total = 0, totals = { d: 0, r: 0, o: 0 };
 		for ( i = 0; i < matches.length; i++ ) {
