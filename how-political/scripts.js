@@ -16,9 +16,23 @@ $( function () {
 			});
 			
 		if ( filter[0].value == ":all" ) matches = donors;
-		if ( filter[0].value == ":top" ) matches = donors.sort( function ( a, b ) {
-			return ( b.r + b.d + b.o ) - ( a.r + a.d + a.o );
-		}).slice(0,5);
+		
+		if ( /top:\d+/.test( filter[0].value ) ) {
+			// Special top logic
+			var depth = filter[0].value.match(/\d+/)[0];
+			matches = donors.sort( function ( a, b ) {
+				return ( b.r + b.d + b.o ) - ( a.r + a.d + a.o );
+			}).slice( 0, depth );
+		}
+		
+		if ( /bottom:\d+/.test( filter[0].value ) ) {
+			// Special bottom logic
+			var depth = filter[0].value.match(/\d+/)[0];
+			matches = donors.sort( function ( a, b ) {
+				return ( a.r + a.d + a.o ) - ( b.r + b.d + b.o );
+			}).slice( 0, depth );
+		}
+		
 		
 		output.text( matches.length + " titles matched:" );
 		
