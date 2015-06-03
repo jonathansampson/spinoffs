@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" charset="UTF-8">
+	<head>
+		<title>How Democratic or Republican is your job?</title>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="styles.css" />
+		<script src="scripts.js"></script>
+	</head>
+	<body class="container">
+
+		<div class="page-header">
+			<div class="container">
+				<div class="col-md-8">
+					<h1>How Democratic or Republican is your job?</h1>
+					<p><span class="glyphicon glyphicon-search"></span> Enter your job title into the field below, or select an example from the list.</p>
+				</div>
+				<div class="col-md-4">
+					<p class="text-right">Thrown together by <a href="http://twitter.com/jonathansampson">@jonathansampson</a><br/>Data from <a href="http://wpo.st/fkWK0">http://wpo.st/fkWK0</a>.</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<input class="form-control" type="text" placeholder="attorney, lawyer" id="filter" />
+			<p class="help-block examples">
+				Examples: 
+					<a href="#">admin</a>, 
+					<a href="#">computer, software, web</a>, 
+					<a href="#">^Software</a> (<em>^ indicates start of title</em>), 
+					<a href="#">^Agent$</a> (<em>$ indicates end of title</em>)
+			</p>
+		</div>
+
+		<div class="col-md-3">
+			<p id="output">0</p>			
+			<ul id="labels"></ul>
+		</div>
+
+		<div class="col-md-9">
+
+			<div class="progress">
+			  <div id="democrat" class="progress-bar progress-bar-info progress-bar-striped" style="width: 35%"></div>
+			  <div id="republican" class="progress-bar progress-bar-danger progress-bar-striped" style="width: 20%"></div>
+			  <div id="other" class="progress-bar progress-bar-warning" style="width: 45%"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4 d">123</div>
+				<div class="col-md-4 r">456</div>
+				<div class="col-md-4 o">12</div>
+			</div>
+
+		</div>
+
+	</body>
+</html>

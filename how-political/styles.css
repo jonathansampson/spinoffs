@@ -1,0 +1,8 @@
+.d, .r, .o {
+	font-size: 36px;
+	text-align: center;
+}
+
+.d { color: #5bc0de }
+.r { color: #c9302c }
+.o { color: #f0ad4e }
